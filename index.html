@@ -1,0 +1,34 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>My website on GitHub</title>
+</head>
+<body>
+
+
+<div class="container">
+    <h2>Mijn geolocatie online</h2>
+    <button id = "mijnKnop" class = " btn-primary">Data inladen van de server</button>
+    <div id = "output">  </div>
+</div>
+<script>
+
+    var  coords = document.getElementById("output" );
+    navigator.geolocation.getCurrentPosition(showPosition, errorHandler, {
+        enableHighAccurancy:true,
+        maximumAge: 1000,
+        timeout:30000,
+    });
+    function showPosition(position) {
+        coords.innerHTML = position.coords.latitude + " " + position.coords.longitude;
+    }
+    function errorHandler(error) {
+        coords.innerHTML = "Error " + error.code + "" + error.message;
+    }
+
+
+</script>
+
+</body>
+</html>
