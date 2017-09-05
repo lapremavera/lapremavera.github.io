@@ -1,0 +1,63 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+
+    <title>Star</title>
+</head>
+
+<link rel="stylesheet" type="text/css" href="canvastStar.css">
+
+<h1>Welkom!</h1>
+<body>
+<canvas id="vorm" width="400" height="300"></canvas>
+<script type="text/javascript">
+
+    var canvas = document.getElementById("vorm");
+    var context = canvas.getContext("2d");
+    /*context.beginPath();
+    context.moveTo(75, 50);
+    context.lineTo(100, 75);
+    context.lineTo(100, 25);
+    context.closePath();
+    context.fillStyle = "red";
+    context.strokeStyle ="black";
+    context.lineWidth = 5;
+    context.fill();
+    context.stroke();
+    */
+
+
+    context.beginPath();
+    context.lineTo(200,100);
+    context.bezierCurveTo(200,50,275,30,275,100);
+    context.bezierCurveTo(275,150,200,175,200,225);
+    context.closePath();
+    context.fillStyle = "red";
+    context.strokeStyle = "black";
+    context.lineWidth = 5;
+    context.fill();
+    context.stroke();
+
+
+    context.beginPath();
+    context.arc(37, 37, 13, Math.PI / 7, -Math.PI / 7, false);
+    context.lineTo(31, 37);
+    context.fillStyle = "green";
+    context.fill();
+
+    context.beginPath();
+    context.lineTo(0,100);
+    context.lineTo(50,100);
+    context.lineTo(100,150);
+
+
+    context.strokeStyle ="blue";
+    context.stroke();
+
+
+</script>
+
+
+</body>
+</html>
