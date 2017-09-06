@@ -1,0 +1,78 @@
+<!DOCTYPE html>
+
+<html lang="en">
+<head>
+    <title>7deler</title>
+    <meta charset="utf-8">
+    <style>
+        table {
+            margin: auto;
+            border-collapse: collapse;
+            display: none;
+        }
+
+        td {
+            border: 0.2rem solid black;
+            padding: 0.5rem;
+            font-family: sans-serif;
+            text-align: center;
+            width: 2rem;
+            height: 2rem;
+        }
+
+        .adjacent {
+            background-color: cyan;
+        }
+
+        .deler {
+            transition-property: background-color;
+            transition-duration: 1s;
+            background-color: red;
+            font-weight: bold;
+        }
+    </style>
+</head>
+<body>
+
+<div id="target"></div>
+
+<script src="node_modules/jquery/dist/jquery.min.js"></script>
+
+<script>
+
+
+
+    var $t = $('<table>');
+    var n =1;
+
+    for(let y= 0; y <10; y++) {
+        var $r = $('<tr>');
+
+        for (let x = 0; x < 10; x++) {
+            var $cell = $('<td>').text(n);
+            $cell.appendTo($r);
+            if (n%7 ===0){
+                $cell.addClass("deler");
+            }
+            n++;
+        }
+        $r.appendTo($t);
+
+    }
+
+    $("body").append($t);
+
+    $("table").hide("slow");
+    $("table").show("1000");
+
+
+
+
+
+
+
+</script>
+
+
+</body>
+</html>

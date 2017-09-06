@@ -1,0 +1,24 @@
+{
+  "name": "lapremavera",
+  "version": "1.0.0",
+  "description": "oefeningen in de les",
+  "main": "actorsAndPersons.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/lapremavera/lapremavera.github.io.git"
+  },
+  "author": "",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/lapremavera/lapremavera.github.io/issues"
+  },
+  "homepage": "https://github.com/lapremavera/lapremavera.github.io#readme",
+  "dependencies": {
+    "d3": "^4.10.2",
+    "jquery": "^3.2.1",
+    "moment": "^2.18.1"
+  }
+}
